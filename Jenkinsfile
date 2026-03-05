@@ -33,14 +33,14 @@ pipeline {
             }
         }
 
-        stage('Deploy to Apache (Optional)') {
-            steps {
-                sh '''
-                echo "Deploying to Apache..."
-                sudo cp -r * /var/www/html/
-                '''
-            }
-        }
+        stage('Deploy to Apache') {
+    steps {
+        sh '''
+        echo "Deploying to Apache..."
+        cp -r * /var/www/html/
+        '''
+    }
+}
     }
 
     post {
